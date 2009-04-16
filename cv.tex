@@ -1,224 +1,153 @@
-% vim:set tw=78 ai:
-\documentclass[12pt,a4paper,english,pdftex]{article}
-\usepackage[utf8]{inputenc}
-\usepackage{babel,fullpage,setspace,calc,tweaklist}
-\usepackage[bookmarks=false]{hyperref}
-\usepackage{currvita}
-\addtolength{\textheight}{0.5cm}
+\documentclass[11pt,a4paper]{moderncv}
 
-\AtBeginDocument{%
-    \settowidth{\cvlabelwidth}{%
-        \cvlabelfont 88/8888 -- 88/8888%
-    }%
+\moderncvtheme[blue]{classic}
+
+\usepackage{etex}
+\usepackage{fontspec}
+\usepackage{xunicode}
+\usepackage{polyglossia}
+\setmainlanguage[variant=british]{english}
+\AtBeginDocument{
+\makeatletter
+\def\english@day{%
+   \ifcase\day\or%
+    1$^{\mbox{\scriptsize st}}$\or 2$^{\mbox{\scriptsize nd}}$\or 3$^{\mbox{\scriptsize rd}}$\or 4$^{\mbox{\scriptsize th}}$\or 5$^{\mbox{\scriptsize th}}$\or%
+    6$^{\mbox{\scriptsize th}}$\or 7$^{\mbox{\scriptsize th}}$\or 8$^{\mbox{\scriptsize th}}$\or 9$^{\mbox{\scriptsize th}}$\or 10$^{\mbox{\scriptsize th}}$\or%
+    11$^{\mbox{\scriptsize th}}$\or 12$^{\mbox{\scriptsize th}}$\or 13$^{\mbox{\scriptsize th}}$\or 14$^{\mbox{\scriptsize th}}$\or 15$^{\mbox{\scriptsize th}}$\or%
+    16$^{\mbox{\scriptsize th}}$\or 17$^{\mbox{\scriptsize th}}$\or 18$^{\mbox{\scriptsize th}}$\or 19$^{\mbox{\scriptsize th}}$\or 20$^{\mbox{\scriptsize th}}$\or%
+    21$^{\mbox{\scriptsize st}}$\or 22$^{\mbox{\scriptsize nd}}$\or 23$^{\mbox{\scriptsize rd}}$\or 24$^{\mbox{\scriptsize th}}$\or 25$^{\mbox{\scriptsize th}}$\or%
+    26$^{\mbox{\scriptsize th}}$\or 27$^{\mbox{\scriptsize th}}$\or 28$^{\mbox{\scriptsize th}}$\or 29$^{\mbox{\scriptsize th}}$\or 30$^{\mbox{\scriptsize th}}$\or%
+    31$^{\mbox{\scriptsize st}}$\fi}
+\makeatother
+\sffamily
 }
 
-\renewcommand{\labelitemi}{--}
 
-\renewcommand{\descripthook}{\setlength{\topsep}{-3pt}%
-  \setlength{\itemsep}{-2pt}}
-\renewcommand{\itemhook}{\setlength{\topsep}{-3pt}%
-  \setlength{\itemsep}{-2pt}}
+\usepackage[margin=2cm,includefoot]{geometry}
+\setlength{\hintscolumnwidth}{3.6cm}
+\AtBeginDocument{\recomputelengths}
+
+\newfontfamily\monofamily[Scale=0.84]{DejaVu Sans Mono}
+\def\UrlFont{\monofamily}
+
+\firstname{Tomáš}
+\familyname{Janoušek}
+\title{Resumé}
+\address{Kosmákova 35}{615\,00, Brno}
+\mobile{+420\,608\,876\,277}
+\email{tomi@nomi.cz}
+\extrainfo{\Pointinghand~\href{http://work.lisk.in/}{work.lisk.in}\\[.2em]
+born 8\/$^{\mbox{\scriptsize th}}$~April~1987}
+\photo[68pt]{picture.jpg}
+\AtBeginDocument{\renewcommand*{\addressfont}{\normalsize\sffamily\mdseries\slshape}}
+
 
 \begin{document}
-\begin{cv}{Curriculum Vitae of Tomáš Janoušek}
-    \begin{cvlist}{Personal}
-        \item
-            Tomáš Janoušek \\
-            Kosmákova 35 \\
-            615\,00, Brno \\
-            Czech Republic
-        \item
-            Phone: +420\,608\,876\,277 \\
-            E-mail: \texttt{tomi@nomi.cz} \\
-            Web: \href{http://work.lisk.in/}{\texttt{http://work.lisk.in/}}
-        \item
-            Place and date of birth: Brno, 8th~April~1987
-    \end{cvlist}
+\maketitle
 
-    \goodbreak
-    \begin{cvlist}{Education}
-        \item[09/2006 -- present]
-            Masaryk University, Faculty of Informatics \\
-            field ``Applied Informatics'' \\
-            \href{http://www.fi.muni.cz/}{\texttt{http://www.fi.muni.cz/}}
-	    \\[2mm]
-	    Member of the Parallel \& Distributed Systems Laboratory since
-	    2008
-        \item[09/2002 -- 06/2006]
-            Grammar school -- Gymnázium Brno, třída Kpt. Jaroše 14 \\
-            \href{http://www.jaroska.cz/}{\texttt{http://www.jaroska.cz/}}
-    \end{cvlist}
+\section{Education}
+\newcommand{\FI}{\href{http://www.fi.muni.cz/}{Masaryk University, Faculty of
+    Informatics}}
+\cventry{09/2006 -- present}{studying}{\FI{}}{Brno}{}
+    {field ``Applied Informatics''\\
+    Member of the \href{http://www.fi.muni.cz/paradise/}{Parallel \&
+    Distributed Systems Laboratory} since 2008}
+\cventry{09/2002 -- 06/2006}{A-levels equiv.}
+    {\href{http://www.jaroska.cz/}{Grammar school Brno, třída Kpt.\ Jaroše 14}}
+    {}{}{}
 
-    \goodbreak
-    \begin{cvlist}{Work experience (all part-time)}
-        \item[09/2007 -- 12/2007]
-	    Masaryk University, Faculty of Informatics, Department of Computer
-	    Science
-            \begin{itemize}
-                \item seminar tutor of a course in Functional programming
-		\item examiner
-            \end{itemize}
-        \item[12/2006 -- 04/2008]
-            Red Hat Czech s.r.o.
-            \begin{itemize}
-                \item Software Engineer
-                \item RHEL/Fedora package maintainer -- bug fixing,
-		implementing new features, integrating software into the
-		Fedora distribution, etc.
-            \end{itemize}
-        \item[11/2002 -- 05/2007]
-            Qnet CZ s.r.o.
-            \begin{itemize}
-                \item Information system development
-                \item VoIP deployment
-                \item Web development
-                \item Network administration (both hardware and software)
-            \end{itemize}
-    \end{cvlist}
+%\section{Master thesis}
+%\cvline{title}{\emph{Title}}
+%\cvline{supervisors}{Supervisors}
+%\cvline{description}{\small Short thesis abstract}
 
-    \goodbreak
-    \begin{cvlist}{Language skills}
-        \item[Czech] native speaker
-        \item[English] advanced written and spoken
-        \item[German] basic written
-    \end{cvlist}
+\section{Experience}
+\cventry{09/2008 -- present}{programmer}{\FI, Department of Computer
+    Science}{Brno}{}{development of a formal verification toolset --
+    \href{http://divine.fi.muni.cz/}{DiVinE}}
+%
+\cventry{09/2008 -- 12/2008\\09/2007 -- 12/2007}{external teacher}{\FI, Department of Computer
+    Science}{Brno}{}{seminar tutor of courses in Functional programming and
+    Formal languages \& automata}
+%
+\cventry{12/2006 -- 04/2008}{software engineer}
+    {\href{http://www.cz.redhat.com/}{Red Hat Czech s.r.o.}}{Brno}{}
+    {RHEL/Fedora package maintainer -- bugfixing, implementation of new
+    features, integration of software into the Fedora Linux distribution,
+    etc.}
+%
+\cventry{11/2002 -- 05/2007}{programmer}
+    {\href{http://www.qnet.cz/}{Qnet CZ s.r.o.}}{Brno}{}
+    {Information system development, VoIP deployment, Web development, Network
+    administration (both hardware and software)}
+%
+\cventry{2002 -- present}{free software contributor}{}{}{}
+    {Maintainer of a few small open source projects. Contributed bug fixes to
+    various projects including X.Org, GNU C library and the Linux kernel.}
 
-    \goodbreak
-    \begin{cvlist}{Personal skills}
-        \item[Driving licence] Group B (Car)
-	\item[Social skills] Excellent communication skills both written and
-	spoken, experiences giving presentations about IT related topics.
+%\subsection{Vocational}
+%\cventry{year--year}{Job title}{Employer}{City}{}{Description}
 
+\section{Languages}
+\cvlanguage{Czech}{native speaker}{}
+\cvlanguage{English}{advanced}{fluent written and spoken\hfill\hbox{}}
+\cvlanguage{German}{basic}{basic written only\hfill\hbox{}}
+
+\section{Personal skills}
+\cvline{driving license}{group B (car)}
+\cvline{communication skills}{Excellent communication skills both written and
+        spoken, experiences giving presentations about IT related topics.
+	\newline
 	Great teaching skills, experiences in teaching computer science and
-	high school mathematics.
+	high school mathematics.}
+\cvline{organisational skills}{Ability to work in team. Ability to catch
+	attention and effectively communicate ideas to a group of people.}
+\cvline{other skills}{Excellent ability to learn. Willingness to take
+        risks and to explore new possibilities.
+	\newline
+	Experiences in proofreading of Czech and English text.}
 
-	\item[Organisational skills] Ability to work in a team. Ability to
-	catch attention and effectively communicate ideas to a group of
-	people.
+\section{Computer skills}
+\subsection{programming languages, technologies}
+\cvcomputer{C/C++}{advanced, 11 years}		% since 1998, 2002 work
+    {Haskell}{advanced, 3 years}		% since 2006
+\cvcomputer{Perl}{advanced, 5 years}		% since 2002
+    {Java}{intermediate, 2 years}		% accum.
+\cvcomputer{Bash}{advanced, 7 years}		% since 2002
+    {web technologies}{intermediate, 6 years}	% accum.
+\cvcomputer{x86 assembler}{intermediate}
+    {\TeX{} and \LaTeXe{}}{advanced, 6 years}	% since 2003
+\cvcomputer{MySQL}{intermediate, 5 years}	% accum.
+    {PostgreSQL}{basic}
+%
+\subsection{networking and systems administration}
+\cvcomputer{IPv4, IPv6, TCP, UDP}{advanced, 7 years}	% since 2002
+    {routing, OSPF, BGP}{intermediate, 3 years}		% accum.
+\cvcomputer{iptables, tc (Linux QoS)}{advanced, 6 years}% since 2002
+    {IP tunneling, OpenVPN}{advanced, 3 years}		% accum.
+\cvcomputer{Linux -- RedHat, Debian}{advanced, 7 years}	% since 2002
+    {other Linux/Unix}{intermediate}
 
-	\item[Other skills] Excellent ability to learn. Willingness to take
-	risks and to explore new possibilities.
+\section{Awards}
+\cventry{06/2004}{1$^{\mbox{\scriptsize st}}$ place}
+    {\href{http://www.stv.cz/pgm_cr/mcr2004vm.html}{Youth championship of the
+    Czech Republic in programming}}{Janské Lázně, 2004}{}{}
 
-	Experiences in proofreading of Czech and English text.
-    \end{cvlist}
+\section{Hobbies}
+\renewcommand{\listitemsymbol}{\Neutral}
+\cvlistdoubleitem{swimming}{in-line skating}
+\cvlistdoubleitem{driving}{winter sports}
 
-    \goodbreak
-    \begin{cvlist}{Computer skills}
-        \item[Programming]
-            \begin{description}
-                \item[C/C++] advanced knowledge, 10 year exp. (6 year
-                work exp.)
-		    % since 1998, 2002 resp.
-                \item[Haskell] advanced knowledge, 2 year exp.
-		    % since 2006
-                \item[Perl] advanced knowledge, 5 year exp.
-		    % since 2002
-                \item[Java] J2SE -- intermediate knowledge, J2ME -- basic
-                knowledge, \\ 1 year exp.
-		    % accum.
-                \item[Bash] intermediate knowledge, 6 year exp.
-		    % since 2002
-                \item[HTML, CSS, PHP] intermediate knowledge, 6 year exp.
-		    % since 2001 ?
-                \item[x86 assembler] basic knowledge
-                \item[doxygen, javadoc] intermediate knowledge, 2 year exp.
-		    % since 2005
-            \end{description}
+% Publications from a BibTeX file
+\renewcommand{\refname}{Publications, talks}
+\makeatletter
+\def\mybiblabel#1(#2){\hskip 0pt plus 1filll\relax #2}
+\def\@biblabel#1{\mybiblabel #1}
+\makeatother
+\nocite{*}
+\bibliographystyle{unsrtnat}
+\bibliography{publications}
 
-	\goodbreak
-        \item[Database]
-            \begin{description}
-                \item[MySQL] intermediate knowledge, 4 year exp. (4 year work
-                exp.)
-		    % accum.
-                \item[PostgreSQL] basic knowledge
-            \end{description}
-
-	\goodbreak
-        \item[Version control]
-            \begin{description}
-		\item[Git] advanced knowledge, 1 year exp.
-		    % since 2007
-                \item[Subversion] advanced knowledge, 4 year exp.
-		    % since 2003
-                \item[CVS] intermediate knowledge, 1 year exp.
-		    % since 2006
-            \end{description}
-
-	\goodbreak
-        \item[Networking]
-            \begin{description}
-                \item[IPv4, IPv6, TCP, UDP] advanced knowledge, 6 year exp.
-		    % since 2002
-                \item[routing, OSPF, BGP] intermediate knowledge, 3 year exp.
-		    % accum
-                \item[iptables, tc (Linux QoS)] advanced knowledge, 5 year
-                exp.
-		    % since 2002
-                \item[IP tunneling, OpenVPN] advanced knowledge, 3 year exp.
-		    % accum
-            \end{description}
-
-	\goodbreak
-        \item[Administration]
-            \begin{description}
-                \item[Linux -- RedHat, Debian] advanced knowledge, 6 year exp.
-		    % since 2002
-                \item[Linux -- other] advanced knowledge
-                \item[FreeBSD] intermediate knowledge %, 1 year exp.
-		    % accum
-                \item[Windows] intermediate knowledge
-            \end{description}
-
-	\goodbreak
-        \item[Typesetting]
-            \begin{description}
-                \item[\LaTeXe] advanced knowledge, 5 year exp.
-		    % since 2003
-                \item[MS Office, OpenOffice.org] intermediate knowledge
-            \end{description}
-
-	%\goodbreak
-        \item[Certificates]
-            \begin{description}
-                \item[Brainbench]
-                    \href{http://work.lisk.in/brainbench.cgi}{\texttt{http://work.lisk.in/brainbench.cgi}}
-            \end{description}
-    \end{cvlist}
-
-    \goodbreak
-    \begin{cvlist}{Publications, talks}
-        \item[11/2006]
-            talk ``MPlayer tips \& tricks'' \\
-            LinuxAlt 2006, Brno \\[1mm]
-	    A talk about the free MPlayer media player, it's pros and cons,
-	    examples of innovative usage and recent features. I gave an
-	    English version of this talk later at the Red Hat developer
-	    conference, the slides for it are on the link as well. \\[1mm]
-            \href{http://tomi.nomi.cz/linuxalt2006/}{\texttt{http://tomi.nomi.cz/linuxalt2006/}}
-        \item[01/2006]
-            project work ``xchat-bttrw'' \\
-            Gymnázium Brno, třída Kpt. Jaroše 14 \\[1mm]
-	    A thesis about a webchat client in C++, covering its design, core
-	    components, code reference and future work. \\[1mm]
-            \href{http://tomi.nomi.cz/xchat-bttrw-doc/}{\texttt{http://tomi.nomi.cz/xchat-bttrw-doc/}}
-    \end{cvlist}
-
-    \goodbreak
-    \begin{cvlist}{Awards}
-        \item[06/2004]
-            Winner of the ``Youth championship of the Czech Republic in
-            programming'' \\
-            \href{http://www.stv.cz/pgm_cr/mcr2004vm.html}{\texttt{http://www.stv.cz/pgm\_cr/mcr2004vm.html}}
-    \end{cvlist}
-
-    \goodbreak
-    \begin{cvlist}{Hobbies}
-        \item swimming, driving, winter sports
-    \end{cvlist}
-
-    \enlargethispage{0.3cm}
-    \cvplace{Brno}
-    \date{\today}
-\end{cv}
+\vfill
+Brno, \today
 \end{document}
