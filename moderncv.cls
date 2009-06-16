@@ -113,10 +113,11 @@
 \AtEndOfClass{%
   \AtBeginDocument{%
     \hypersetup{%
-      pdfauthor     = \@firstname~\@familyname,%
-      pdftitle      = \@title,%
-      pdfsubject    = \@firstname~\@familyname,%
-      pdfkeywords   = \@firstname~\@familyname{} curriculum vitae}}}
+%      pdfauthor     = \@firstname \@familyname,%
+%      pdftitle      = \@title,%
+%      pdfsubject    = \@firstname \@familyname,%
+%      pdfkeywords   = \@firstname \@familyname{} curriculum vitae
+}}}
 \urlstyle{tt}
 
 % graphics
