@@ -104,7 +104,7 @@
 \hypersetup{%
   breaklinks,
   baseurl       = http://,%
-  pdfborder     = 0 0 0,%
+%  pdfborder     = 0 0 0,%
   pdfpagemode   = UseNone,%
 %  pdfstartview  = XYZ,%
   pdfstartpage  = 1,%
