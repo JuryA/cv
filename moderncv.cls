@@ -277,7 +277,8 @@
   \addcontentsline{toc}{part}{#1}%
   \parbox[m]{\hintscolumnwidth}{\raggedleft\hintfont{\color{sectionrectanglecolor}\rule{\hintscolumnwidth}{1ex}}}%
   \hspace{\separatorcolumnwidth}%
-  \parbox[m]{\maincolumnwidth}{\sectionstyle{#1}}\\[1ex]}
+  \parbox[m]{\maincolumnwidth}{\sectionstyle{#1}}\par\vspace{1ex}}
+%  \parbox[m]{\maincolumnwidth}{\sectionstyle{#1}}\\[1ex]}
 %  \cvline[1ex]{\color{sectionrectanglecolor}\rule[0]{\hintscolumnwidth}{1ex}}{\sectionstyle{#1}}}% gives bad alignment of rectangle; too bad m{width} columns seem not to work as a valid column definition for tabular environments
 
 % usage: \subsection{title}

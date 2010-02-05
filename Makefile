@@ -1,5 +1,5 @@
 include ~/tex/common.mak
-SHOW=yes
+SHOW=no
 LATEX=xelatex
 BIBTEX=bibtex
 

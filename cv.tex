@@ -1,10 +1,10 @@
+% vim:set spell spelllang=en: %
 \documentclass[11pt,a4paper]{moderncv}
 
 \moderncvtheme[blue]{classic}
 
 \usepackage{etex}
-\usepackage{fontspec}
-\usepackage{xunicode}
+\usepackage{xltxtra}
 \usepackage{polyglossia}
 \setmainlanguage[variant=british]{english}
 \AtBeginDocument{
@@ -21,6 +21,10 @@
 \makeatother
 \sffamily
 }
+\usepackage{relsize}
+\def\RSpercentTolerance{1}
+\def\RSsmallest{3pt}
+\def\RSlargest{50pt}
 
 
 \usepackage[margin=2cm,includefoot]{geometry}
@@ -39,7 +43,8 @@
 }
 \firstname{Tomáš}
 \familyname{Janoušek}
-\title{curriculum vit\ae}
+%\title{curriculum vit\ae}
+\title{a bug slayer}
 \address{Kosmákova 35}{615\,00, Brno}
 \mobile{+420\,608\,876\,277}
 \email{tomi@nomi.cz}
@@ -51,6 +56,13 @@ born 8\/$^{\mbox{\scriptsize th}}$~April~1987}
 
 \begin{document}
 \maketitle
+
+\section{Profile}{\relscale{1.1}
+An experienced programmer and Linux specialist with strong background in
+computer science. Particularly skilled in bug fixing and fast comprehension of
+code. Currently focused on functional programming and formal verification.
+\addtolength{\leftskip}{1cm}
+\addtolength{\rightskip}{1cm}\par}
 
 \section{Education}
 \newcommand{\FI}{\href{http://www.fi.muni.cz/}{Masaryk University, Faculty of
@@ -69,12 +81,12 @@ born 8\/$^{\mbox{\scriptsize th}}$~April~1987}
 %\cvline{description}{\small Short thesis abstract}
 
 \section{Experience}
-\cventry{09/2008 -- present}{programmer}{\FI, Department of Computer
+\cventry{09/2008 -- 12/2009}{programmer}{\FI, Department of Computer
     Science}{Brno}{}{Development of a formal verification toolset --
     \href{http://divine.fi.muni.cz/}{\textsc{DiVinE}}.}
 %
 \cventry{09/2008 -- 12/2008\\09/2007 -- 12/2007}{external teacher}{\FI, Department of Computer
-    Science}{Brno}{}{Seminar tutor of courses in Functional programming and
+    Science}{Brno}{}{Teaching assistant of courses in Functional programming and
     Formal languages \& automata.}
 %
 \cventry{12/2006 -- 04/2008}{software engineer}
@@ -90,7 +102,8 @@ born 8\/$^{\mbox{\scriptsize th}}$~April~1987}
 %
 \cventry{2002 -- present}{free software contributor}{}{}{}
     {Maintainer of a few small open source projects. Contributed bug fixes to
-    various projects including X.Org, GNU C library and the Linux kernel.}
+    various projects including X.Org, GNU C library and the Linux kernel, as
+    well as enhancements to the Fluxbox and xmonad window managers.}
 
 %\subsection{Vocational}
 %\cventry{year--year}{Job title}{Employer}{City}{}{Description}
@@ -98,13 +111,13 @@ born 8\/$^{\mbox{\scriptsize th}}$~April~1987}
 \section{Languages}
 \cvlanguage{Czech}{native speaker}{}
 \cvlanguage{English}{advanced}{fluent written and spoken\hfill\hbox{}}
-\cvlanguage{German}{basic}{basic written only\hfill\hbox{}}
+\cvlanguage{German}{basic}{} %basic written only\hfill\hbox{}}
 
 \section{Personal skills}
-\cvline{driving license}{group B (car)}
+\cvline{driving license}{Yes, group B (car).}
 \cvline{communication skills}{Excellent communication skills both written and
         spoken, experiences giving presentations about IT related topics.
-	\newline
+	%\newline
 	Great teaching skills, experiences in teaching computer science and
 	high school mathematics.}
 \cvline{organisational skills}{Ability to work in team. Ability to catch
@@ -116,16 +129,16 @@ born 8\/$^{\mbox{\scriptsize th}}$~April~1987}
 
 \section{Computer skills}
 \subsection{programming languages, technologies}
-\cvcomputer{C/C++}{advanced, 11 years}		% since 1998, 2002 work
+\cvcomputer{C and C++}{advanced, 12 years}	% since 1998, 2002 work
     {Haskell}{advanced, 3 years}		% since 2006
-\cvcomputer{Perl}{advanced, 5 years}		% since 2002
-    {Java}{intermediate, 2 years}		% accum.
-\cvcomputer{Bash}{advanced, 7 years}		% since 2002
-    {web technologies}{intermediate, 6 years}	% accum.
-\cvcomputer{x86 assembler}{intermediate}
+\cvcomputer{Perl}{advanced, 6 years}		% since 2002
     {\TeX{} and \LaTeXe{}}{advanced, 6 years}	% since 2003
-\cvcomputer{MySQL}{intermediate, 5 years}	% accum.
-    {PostgreSQL}{basic}
+\cvcomputer{Bash}{advanced, 7 years}		% since 2002
+    {Java}{intermediate, 2 years}		% accum.
+\cvcomputer{x86 assembler}{intermediate}
+    {web technologies}{intermediate, 6 years}	% accum.
+\cvcomputer{C for CUDA}{intermediate}
+    {MySQL}{intermediate, 5 years}		% accum.
 %
 \subsection{networking and systems administration}
 \cvcomputer{IPv4, IPv6, TCP, UDP}{advanced, 7 years}	% since 2002
@@ -156,5 +169,5 @@ born 8\/$^{\mbox{\scriptsize th}}$~April~1987}
 \bibliography{publications}
 
 \vfill
-Brno, \today
+Vienna, Austria, \today
 \end{document}
