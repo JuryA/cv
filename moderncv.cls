@@ -132,7 +132,7 @@
 \pagestyle{plain}
 
 % compatibility package with older versions of moderncv
-\RequirePackageWithOptions{moderncvcompatibility}
+%\RequirePackageWithOptions{moderncvcompatibility}
 
 
 %-------------------------------------------------------------------------------
