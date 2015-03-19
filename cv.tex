@@ -1,0 +1,159 @@
+% vim:set tw=78 ai:
+\documentclass[12pt,a4paper,english]{article}
+\usepackage[latin2]{inputenc}
+\usepackage{babel,a4wide,setspace,calc,hyperref,tweaklist}
+\usepackage{currvita}
+
+\AtBeginDocument{%
+    \settowidth{\cvlabelwidth}{%
+        \cvlabelfont 88/8888 -- 88/8888%
+    }%
+}
+
+\renewcommand{\labelitemi}{--}
+
+\renewcommand{\descripthook}{\setlength{\topsep}{-3pt}%
+  \setlength{\itemsep}{-2pt}}
+\renewcommand{\itemhook}{\setlength{\topsep}{-3pt}%
+  \setlength{\itemsep}{-2pt}}
+
+\begin{document}
+\begin{cv}{Curriculum Vitae of Tomá¹ Janou¹ek}
+    \begin{cvlist}{Personal}
+        \item
+            Tomá¹ Janou¹ek \\
+            Kosmákova 35 \\
+            615\,00, Brno \\
+            Czech Republic
+        \item
+            Phone: +420\,608\,876\,277 \\
+            E-mail: \texttt{tomi@nomi.cz} \\
+            Web: \href{http://work.lisk.in/}{\texttt{http://work.lisk.in/}}
+        \item
+            Place and date of birth: Brno, 8th~April~1987
+    \end{cvlist}
+
+    \begin{cvlist}{Education}
+        \item[09/2006 -- present]
+            Masaryk University, Faculty of Informatics \\
+            field ``Applied Informatics'' \\
+            \href{http://www.fi.muni.cz/}{\texttt{http://www.fi.muni.cz/}}
+        \item[09/2002 -- 06/2006]
+            Grammar school -- Gymnázium Brno, tøída Kpt. Jaro¹e 14 \\
+            \href{http://www.jaroska.cz/}{\texttt{http://www.jaroska.cz/}}
+    \end{cvlist}
+
+    \begin{cvlist}{Work experience}
+        \item[12/2006 -- present]
+            Red Hat Czech s.r.o.
+            \begin{itemize}
+                \item Software Engineer
+                \item RHEL/Fedora package maintainer
+            \end{itemize}
+        \item[11/2002 -- present]
+            Qnet CZ s.r.o.
+            \begin{itemize}
+                \item Information system development
+                \item VoIP deployment
+                \item Web development
+                \item Network administration
+            \end{itemize}
+    \end{cvlist}
+
+    \begin{cvlist}{Language skills}
+        \item
+        \begin{description}
+        \item[Czech] native speaker
+        \item[English] advanced written and spoken
+        \item[German] basic written
+        \end{description}
+    \end{cvlist}
+
+    \begin{cvlist}{Technical skills}
+        \item[Programming]
+            \begin{description}
+                \item[C/C++] advanced knowledge, 8 year exp. (4 year
+                work exp.)
+                \item[Perl] advanced knowledge, 5 year exp.
+                \item[Java] J2SE -- intermediate knowledge, J2ME -- basic
+                knowledge, \\ 1 year exp.
+                \item[Bash] intermediate knowledge, 5 year exp.
+                \item[Haskell] intermediate knowledge
+                \item[HTML, CSS, PHP] advanced knowledge, 6 year exp.
+                \item[x86 assembler] basic knowledge
+                \item[doxygen, javadoc] intermediate knowledge, 1 year exp.
+            \end{description}
+
+        \item[Database]
+            \begin{description}
+                \item[MySQL] intermediate knowledge, 4 year exp. (4 year work
+                exp.)
+                \item[PostgreSQL] basic knowledge
+            \end{description}
+
+        \item[Version control]
+            \begin{description}
+                \item[CVS] intermediate knowledge
+                \item[Subversion] advanced knowledge, 4 year exp.
+            \end{description}
+
+        \item[Networking]
+            \begin{description}
+                \item[IPv4, TCP, UDP] advanced knowledge, 5 year exp.
+                \item[routing, OSPF, BGP] advanced knowledge, 3 year exp.
+                \item[iptables, tc (Linux QoS)] advanced knowledge, 4 year
+                exp.
+                \item[IP tunneling, OpenVPN] advanced knowledge, 2 year exp.
+            \end{description}
+
+        \item[Administration]
+            \begin{description}
+                \item[Linux -- RedHat, Debian] advanced knowledge, 5 year exp.
+                \item[Linux -- other] intermediate knowledge
+                \item[FreeBSD] basic knowledge, 1 year exp.
+                \item[Windows] intermediate knowledge
+            \end{description}
+
+        \item[Typesetting]
+            \begin{description}
+                \item[\LaTeXe] intermediate knowledge, 4 year exp.
+                \item[MS Office, OpenOffice.org] basic knowledge
+            \end{description}
+
+        \item[Certificates]
+            \begin{description}
+                \item[Brainbench]
+                    \href{http://work.lisk.in/brainbench.cgi}{\texttt{http://work.lisk.in/brainbench.cgi}}
+            \end{description}
+    \end{cvlist}
+
+    \begin{cvlist}{Publications, talks}
+        \item[11/2006]
+            LinuxAlt 2006, Brno \\
+            talk ``MPlayer'' --
+            \href{http://tomi.nomi.cz/linuxalt2006/}{\texttt{http://tomi.nomi.cz/linuxalt2006/}}
+        \item[01/2006]
+            project work ``xchat-bttrw'' \\
+            Gymnázium Brno, tøída Kpt. Jaro¹e 14 \\
+            \href{http://tomi.nomi.cz/xchat-bttrw-doc/}{\texttt{http://tomi.nomi.cz/xchat-bttrw-doc/}}
+    \end{cvlist}
+
+    \begin{cvlist}{Awards}
+        \item[06/2004]
+            Winner of the ``Youth championship of the Czech Republic in
+            programming'' \\
+            \href{http://www.stv.cz/pgm_cr/mcr2004vm.html}{\texttt{http://www.stv.cz/pgm\_cr/mcr2004vm.html}}
+    \end{cvlist}
+
+    \begin{cvlist}{Other skills}
+        \item[Driving licence] B (Car)
+    \end{cvlist}
+
+    \begin{cvlist}{Hobbies}
+        \item swimming, cycling, driving
+    \end{cvlist}
+
+    \cvplace{Brno}
+    \date{\today}
+\end{cv}
+\end{document}
