@@ -1,5 +1,5 @@
 include ~/tex/common.mak
 SHOW:=yes
-PDFLATEX:=pdflatex
+LATEX:=pdflatex
 
 all: cv.pdf
